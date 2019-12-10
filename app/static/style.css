@@ -86,11 +86,16 @@ form input:hover {
 .checker-left {
     float: left;
     width: 700px;
-    height: 450px;
+    height: 500px;
 }
+
+textarea {
+    resize: none;
+}
+
 .checker-left textarea {
     width: 650px;
-    height: 410px;
+    height: 430px;
     border-color: #494949;
     border-width: 2px;
     border-style: dashed;
@@ -99,7 +104,7 @@ form input:hover {
 .checker-right {
     float: right;
     width: 300px;
-    height: 450px;
+    height: 500px;
 }
 
 .checker-right textarea {
