@@ -80,7 +80,7 @@ form input:hover {
 
 
 .result{
-    height: 150px;
+    height: 500px;
 }
 
 .checker-left {
@@ -99,6 +99,7 @@ textarea {
     border-color: #494949;
     border-width: 2px;
     border-style: dashed;
+    font-size: 18px;
 }
 
 .checker-right {
@@ -113,6 +114,7 @@ textarea {
     border-color: #494949;
     border-width: 2px;
     border-style: dashed;
+    font-size: 16px;
 }
 
 footer {
