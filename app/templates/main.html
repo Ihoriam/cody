@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CodeChecker</title>
-    <link rel="stylesheet" href="../static/style.css">
-</head>
-<body>
-    <div class="real-body">
-        <header>
-            <p>CodeChecker</p>
-            <nav>
-                <a href="#">Type1</a>
-                <a href="#">Type2</a>
-                <a href="#">Type3</a>
-            </nav>
-        </header>
-        <hr>
-        <main>
-            <div class="checker">
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="checker">
                 <form action="" method="post" novalidate>
                     <div class="checker-left">
 {#                        <textarea rows="3" cols="20" placeholder="Your code"></textarea>#}
@@ -41,17 +25,4 @@
                     {{ form.submit() }}
                 </form>
             </div>
-            <div class="result">
-                <p>Result:</p>
-            </div>
-
-        </main>
-        <hr>
-        <footer>
-            <p>Author: ihoriam</p>
-            <p>Version: 0.1</p>
-            <p>Technology: Python, Flask</p>
-        </footer>
-    </div>
-</body>
-</html>
+{% endblock %}
