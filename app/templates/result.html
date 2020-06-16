@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row bg mt-3 mb-3 rounded">
+        <div class="col text-center">
+          {% if flag %}
+            <h3 class="text-success">Успішно виконано</h3>
+            {% else %}
+            <h3 class="text-danger">Ой, десь помилка</h3>
+            {% endif %}
+          
+        </div>
+    </div>
+    <div class="row">
+      <div class="col border rounded mr-2">
+        <h5>Ваше рішення</h5>
+        <pre><code>{{code}}</code></pre>
+      </div>
+      <div class="col border rounded ml-2">
+        <h5>Запропоноване рішення</h5>
+        {% if flag %}
+          <pre><code>{{propose_code}}</code></pre>
+        {% else %}
+        {% endif %}
+      </div>
+    </div>
+    <div class="row border rounded mt-3 mb-3">
+      <div class="col">
+        <h5>Тести</h5>
+        <p>Помилка при проходженні {{count+1}} теста із {{num_tests}}</p>
+      </div>
+    </div>
+    <div class="row border rounded mt-3 mb-3">
+      <div class="col">
+        <h5>Помилки</h5>
+          {% if flag %}
+            <p>Відсутні</p>
+            {% else %}
+            <pre><samp>{{ error }}</samp></pre>
+          {% endif %}
+        
+      </div>
+      
+    </div>
+  </div>
+  
+{% endblock %}

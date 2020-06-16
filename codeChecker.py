@@ -1,2 +1,0 @@
-
-from checky import app

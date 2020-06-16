@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from 'bootstrap/form.html' import render_form, render_field %}
+
+{% block content %}
+<div class="jumbotron">
+    <h2>{{task.name}}</h2>
+    <p>{{task.about}}</p>
+</div>
+
+<div class="container">
+    <!-- <form action="" method="post" novalidate> -->
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        <div class="row justify-content-md-center">
+            <div class="col-8 align-content-center">
+                {{ form.csrf_token }}
+                {{  render_field(form.codeField) }}
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4 align-self-center">
+                {{ render_field(form.submit, button_map={'submit':'primary'}) }}
+            </div>
+            <div class="col-4 align-self-center">
+                {{ render_field(form.selectLang) }}
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../static/code.ico">
+    {{ bootstrap.load_css() }}
+    <title>CodeChecker</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-default navbar-dark bg-primary rounded mt-3 mb-3">
+                <div>
+                    <a class="navbar-brand" href="{{ url_for('mainPage') }}">
+                        <img src="/static/code.svg" width="30" height="30" hspace="10" class="d-inline-block align-middle" alt="">
+                    <strong class="text-light align-middle">Cody</strong>
+                    </a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://github.com/Ihoriam">Github</a>
+                </div>
+                
+
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <hr class="my-4">
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Наверх</a>
+                </p>
+                <p>Курсова робота на тему "Веб сервіс для тестування коду"</p>
+                <p>Виконав студент 3 курсу Прикладної математики Ігнатенко І. О.</p>
+                <p>Керівник роботи Сердюк О. А.</p>
+                <p></p>
+            </div>
+        </footer>
+
+        {{ bootstrap.load_js() }}
+    </div>
+</body>
+
+</html>
